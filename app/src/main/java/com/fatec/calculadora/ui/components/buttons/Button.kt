@@ -21,25 +21,26 @@ fun NumberButton(number: String){
         shape = RectangleShape,
         colors = ButtonDefaults.buttonColors(Color.Gray),
         modifier = Modifier.size(width = 90.dp, height = 90.dp)) {
-        Text(text = number, fontSize = 25.sp)
+        Text(text = number, fontSize = 22.sp)
     }
 }
 
 @Composable
-fun OpButtons(op: String){
+fun OpButton(op: String){
     Button(onClick = {println(op)},
         shape = RectangleShape,
         colors = ButtonDefaults.buttonColors(Color.DarkGray),
         modifier = Modifier.size(width = 90.dp, height = 90.dp)) {
-        Text(text = op, fontSize = 25.sp)
+        Text(text = op, fontSize = 22.sp)
     }
 }
 
-@Preview(showSystemUi = true)
 @Composable
-fun PreviewNumberButton(){
-    Row{
-        NumberButton(number = "1")
-        OpButtons(op = "+")
+fun EqualButton(){
+    Button(onClick = { /*TODO*/ },
+    shape = RectangleShape,
+    colors = ButtonDefaults.buttonColors(Color.Black),
+        modifier = Modifier.size(width = 183.dp, height = 90.dp)){
+        Text(text = "=", fontSize = 22.sp)
     }
 }
